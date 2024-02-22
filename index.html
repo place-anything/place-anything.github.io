@@ -528,8 +528,19 @@
       </div>
     </div> -->
     <!--/ Concurrent Work. -->
+    <div class="content has-text-centered">
+    <p>
+      Wanna get access to Place-Anything? Submit your enquires here!
+  </p>
+    <div>
+      <input type="email" id="userEmail" placeholder="Enter your email" required>
+      <button onclick="saveEmail()">Confirm</button>
+    </div>
+    <!-- Optional: Placeholder for displaying a success message -->
+    <p id="successMessage" style="display:none;">Thank you for submitting your email!</p>
 
   </div>
+</div>
 </section>
 
 
@@ -557,13 +568,11 @@
         <i class="fab fa-github"></i>
       </a>
     </div> -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            copyrighttapall.ai
           </p>
           <p>
             This project page is constructed using the wonderful template provided by <a
@@ -571,7 +580,28 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+          <p>
+          The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>.
+          </p>
+          <p>
+              &copy; 2024 <strong>tapall.ai</strong>. All rights reserved.
+          </p>
+      </div>
+  </footer>
+  <script>
+      function saveEmail() {
+          var email = document.getElementById('userEmail').value;
+          // Placeholder for where you'd actually handle the email saving logic
+          console.log("Email submitted: " + email);
+          // Displaying a success message
+          document.getElementById('successMessage').style.display = 'block';
+          // Here you could also send the email to a server using fetch or XMLHttpRequest
+      }
+  </script>
+  
   </div>
 </footer>
 
