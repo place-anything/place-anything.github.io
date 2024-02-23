@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+    content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PAAV:Place Anything into Any Video</title>
@@ -22,15 +23,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
@@ -40,32 +39,33 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Place Anything into Any Video</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Ziling Liu</a><sup>1,2</sup>,</span>
-            <span class="author-block">
-              Jinyu Yang</a><sup>1</sup>,</span>
-            <span class="author-block">
-              Mingqi Gao</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              Feng Zheng</a><sup>1,2</sup>,
-            </span>
-          </div>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Place Anything into Any Video</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Ziling Liu</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                Jinyu Yang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                Mingqi Gao</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Feng Zheng</a><sup>1,2</sup>,
+              </span>
+            </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>tapall.ai</span>
-            <span class="author-block"><sup>2</sup>Southern University of Science and Technology,</span>
-          </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>tapall.ai</span>
+              <span class="author-block"><sup>2</sup>Southern University of Science and Technology,</span>
+            </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -79,7 +79,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
+                <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -88,27 +88,26 @@
                   <span>arXiv</span>
                 </a>
               </span> -->
-              
-              <span class="link-block">
-                <a href="https://youtu.be/afXqgLLRnTE"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              
-            </div>
 
+                <span class="link-block">
+                  <a href="https://youtu.be/afXqgLLRnTE" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- <section class="hero teaser">
+  <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -125,7 +124,7 @@
 </section> -->
 
 
-<!-- <section class="hero is-light is-small">
+  <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -183,23 +182,30 @@
 </section> -->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Controllable video editing has demonstrated remarkable potential across diverse applications, particularly in scenarios where capturing or re-capturing real-world videos is either impractical or costly. This paper introduces a novel and efficient system named Place-Anything, which facilitates the insertion of any object into any video solely based on a picture or text description of the target object or element. The system comprises three modules: 3D generation, video reconstruction, and 3D target insertion. This integrated approach offers an efficient and effective solution for producing and editing high-quality videos by seamlessly inserting realistic objects. Through a user study, we demonstrate that our system can effortlessly place any object into any video using just a photograph of the object.
-          </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Controllable video editing has demonstrated remarkable potential across diverse applications, particularly
+              in scenarios where capturing or re-capturing real-world videos is either impractical or costly. This paper
+              introduces a novel and efficient system named Place-Anything, which facilitates the insertion of any
+              object into any video solely based on a picture or text description of the target object or element. The
+              system comprises three modules: 3D generation, video reconstruction, and 3D target insertion. This
+              integrated approach offers an efficient and effective solution for producing and editing high-quality
+              videos by seamlessly inserting realistic objects. Through a user study, we demonstrate that our system can
+              effortlessly place any object into any video using just a photograph of the object.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
+      <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -209,301 +215,287 @@
       </div>
     </div>
     <!--/ Paper video. -->
-  </div>
-</section>
+    </div>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- case1 -->
-    <div class="columns is-centered">
-      <!-- reference image -->
-      <div class="column">
-        <h2 class="title is-3">Reference image</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <!-- <p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- case1 -->
+      <div class="columns is-centered">
+        <!-- reference image -->
+        <div class="column">
+          <h2 class="title is-3">Reference image</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <!-- <p>
               As a byproduct of our method, we can also solve the matting problem by ignoring
               samples that fall outside of a bounding box during rendering.
             </p> -->
-            <!-- 插入图片 -->
-            <img src="./static/reference_image/sofa3.jpg" alt="Description of the image" height="100%">
+              <!-- 插入图片 -->
+              <img src="./static/reference_image/sofa3.jpg" alt="Description of the image" height="100%">
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Original Video</h2>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Archive/blur_home2_before.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Result video</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/Archive/blur_home2_after.mp4"
-                      type="video/mp4">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Original Video</h2>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/Archive/blur_home2_before.mp4" type="video/mp4">
             </video>
           </div>
-
         </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <h2 class="title is-3">Result video</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/Archive/blur_home2_after.mp4" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+
       </div>
 
+      <!-- case2 -->
+      <div class="columns is-centered">
+        <div class="column">
 
-    </div>
+          <div class="columns is-centered">
+            <div class="column content" style="display: flex; justify-content: center; align-items: center;">
+              <!-- 插入图片 -->
+              <img src="./static/reference_image/perfume.png" alt="Description of the image" height="168" width="168">
+            </div>
+          </div>
+        </div>
 
-    <!-- case2 -->
-    <div class="columns is-centered">
-      <div class="column">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <!-- <h2 class="title is-3">Original Video</h2> -->
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/Archive/new_blur_makeup_before.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
 
-        <div class="columns is-centered">
+        <!-- Matting. -->
+        <div class="column">
+          <!-- <h2 class="title is-3">Result video</h2> -->
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/Archive/new_blur_makeup_after.mp4" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- case3 -->
+      <div class="columns is-centered">
+        <!-- reference image -->
+        <div class="column">
+
+          <div class="columns is-centered">
+            <div class="column content" style="display: flex; justify-content: center; align-items: center;">
+              <!-- 插入图片 -->
+              <img src="./static/reference_image/kouhong.png" alt="Description of the image" height="130" width="130">
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <!-- <h2 class="title is-3">Original Video</h2> -->
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/original_videos/makeup1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <!-- <h2 class="title is-3">Result video</h2> -->
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/result_videos/makeup1.mp4" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- sora -->
+      <div class="columns is-centered">
+        <!-- reference image -->
+        <div class="column">
+
+          <div class="columns is-centered">
+            <div class="column content" style="display: flex; justify-content: center; align-items: center;">
+              <!-- 插入图片 -->
+              <img src="./static/reference_image/booth.jpeg" alt="Description of the image" height="130" width="130">
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <!-- <h2 class="title is-3">Original Video</h2> -->
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/original_videos/original_sora.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <!-- <h2 class="title is-3">Result video</h2> -->
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/result_videos/sora_booth.mp4" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns is-centered">
+        <!-- reference image -->
+        <div class="column">
+
+          <div class="columns is-centered">
+            <div class="column content" style="display: flex; justify-content: center; align-items: center;">
+              <!-- 插入图片 -->
+              <img src="./static/reference_image/denta.jpg" alt="Description of the image" height="110" width="110">
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <!-- <h2 class="title is-3">Original Video</h2> -->
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/Archive/sora_sea.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <!-- <h2 class="title is-3">Result video</h2> -->
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/Archive/sora_sea_result.mp4" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- case4 -->
+      <div class="columns is-centered">
+        <!-- reference image -->
+        <div class="column">
+          <h2 class="title is-3">Text description</h2>
           <div class="column content" style="display: flex; justify-content: center; align-items: center;">
-            <!-- 插入图片 -->
-            <img src="./static/reference_image/perfume.png" alt="Description of the image" height="168" width="168">
+            <div class="column content">
+              <img src="./static/reference_image/burger.png" alt="Description of the image" height="100%">
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <!-- <h2 class="title is-3">Original Video</h2> -->
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Archive/new_blur_makeup_before.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <!-- <h2 class="title is-3">Result video</h2> -->
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/Archive/new_blur_makeup_after.mp4"
-                      type="video/mp4">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Original Video</h2>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/original_videos/elec1.mp4" type="video/mp4">
             </video>
           </div>
-
         </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <h2 class="title is-3">Result video</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/result_videos/elec1.mp4" type="video/mp4">
+              </video>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-    
-    </div>
-
-    <!-- case3 -->
-    <div class="columns is-centered">
-      <!-- reference image -->
-      <div class="column">
-
-        <div class="columns is-centered">
+      <!-- case5 -->
+      <div class="columns is-centered">
+        <!-- reference image -->
+        <div class="column">
           <div class="column content" style="display: flex; justify-content: center; align-items: center;">
-            <!-- 插入图片 -->
-            <img src="./static/reference_image/kouhong.png" alt="Description of the image" height="130" width="130">
+            <div class="column content">
+              <img src="./static/reference_image/rose.png" alt="Description of the image" height="100%">
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <!-- <h2 class="title is-3">Original Video</h2> -->
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/original_videos/makeup1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <!-- <h2 class="title is-3">Result video</h2> -->
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/result_videos/makeup1.mp4"
-                      type="video/mp4">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/Archive/blur_Food_before.mp4" type="video/mp4">
             </video>
           </div>
-
         </div>
-      </div>
-    
-    </div>
+        <!--/ Visual Effects. -->
 
-    <!-- sora -->
-    <div class="columns is-centered">
-      <!-- reference image -->
-      <div class="column">
+        <!-- Matting. -->
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/Archive/blur_Food_after.mp4" type="video/mp4">
+              </video>
+            </div>
 
-        <div class="columns is-centered">
-          <div class="column content" style="display: flex; justify-content: center; align-items: center;">
-            <!-- 插入图片 -->
-            <img src="./static/reference_image/booth.jpeg" alt="Description of the image" height="130" width="130">
           </div>
         </div>
+
       </div>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <!-- <h2 class="title is-3">Original Video</h2> -->
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/original_videos/original_sora.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <div class="column">
-        <!-- <h2 class="title is-3">Result video</h2> -->
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/result_videos/sora_booth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
+      <!-- Animation. -->
 
-        </div>
-      </div>
-    
-    </div>
-
-    <div class="columns is-centered">
-      <!-- reference image -->
-      <div class="column">
-
-        <div class="columns is-centered">
-          <div class="column content" style="display: flex; justify-content: center; align-items: center;">
-            <!-- 插入图片 -->
-            <img src="./static/reference_image/denta.jpg" alt="Description of the image" height="110" width="110">
-          </div>
-        </div>
-      </div>
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <!-- <h2 class="title is-3">Original Video</h2> -->
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Archive/sora_sea.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <!-- <h2 class="title is-3">Result video</h2> -->
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/Archive/sora_sea_result.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    
-    </div>
-
-    <!-- case4 -->
-    <div class="columns is-centered">
-      <!-- reference image -->
-      <div class="column">
-        <h2 class="title is-3">Text description</h2>
-        <div class="column content" style="display: flex; justify-content: center; align-items: center;">
-          <div class="column content">
-            <img src="./static/reference_image/burger.png" alt="Description of the image" height="100%">
-          </div>
-        </div>
-      </div>
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Original Video</h2>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/original_videos/elec1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Result video</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/result_videos/elec1.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-    <!-- case5 -->
-    <div class="columns is-centered">
-      <!-- reference image -->
-      <div class="column">
-        <div class="column content" style="display: flex; justify-content: center; align-items: center;">
-          <div class="column content">
-            <img src="./static/reference_image/rose.png" alt="Description of the image" height="100%">
-          </div>
-        </div>
-      </div>
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Archive/blur_Food_before.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/Archive/blur_Food_after.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-   
-
-    <!-- Animation. -->
-  
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
+      <!-- Concurrent Work. -->
+      <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -527,24 +519,32 @@
         </div>
       </div>
     </div> -->
-    <!--/ Concurrent Work. -->
-    <div class="content has-text-centered">
-    <p>
+      <!--/ Concurrent Work. -->
+      <div class="content has-text-centered">
+        <p>
       Wanna get access to Place-Anything? Please submit your enquires here! Or send email to service@tapall.ai
-  </p>
-    <div>
-      <input type="email" id="userEmail" placeholder="Enter your enquires" required>
-      <button onclick="saveEmail()">Confirm</button>
+        </p>
+        <div class="email">
+          <p class="email-message"></p>
+          <label for="name">Name<span class="errorField" id="nameError"></span></label><input type="text" id="name"
+            name="name" placeholder="Enter your name" required>
+          <label for="email">Email<span class="errorField" id="emailError"></span></label><input type="email" id="email"
+            name="email" placeholder="Enter your email" required>
+          <label for="message">Message<span class="errorField" id="messageError"></span></label><textarea id="message"
+            name="message" rows="3" cols="50" placeholder="Enter your nessage" required></textarea>
+          <div class="email-footer">
+            <button onclick="saveEmail()">Confirm</button>
+          </div>
+        </div>
+        <!-- Optional: Placeholder for displaying a success message -->
+        <p id="successMessage" style="display:none;">Thank you for submitting your email!</p>
+
+      </div>
     </div>
-    <!-- Optional: Placeholder for displaying a success message -->
-    <p id="successMessage" style="display:none;">Thank you for submitting your email!</p>
-
-  </div>
-</div>
-</section>
+  </section>
 
 
-<!-- <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -557,9 +557,9 @@
 </section> -->
 
 
-<footer class="footer">
-  <div class="container">
-    <!-- <div class="content has-text-centered">
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -568,7 +568,7 @@
         <i class="fab fa-github"></i>
       </a>
     </div> -->
-    <!-- <div class="columns is-centered">
+      <!-- <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
@@ -581,29 +581,112 @@
         </div>
       </div>
     </div> -->
-    <footer class="footer">
-      <div class="content has-text-centered">
+      <footer class="footer">
+        <div class="content has-text-centered">
           <p>
-          The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>.
+            The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io"
+              target="_blank">Nerfies</a>.
           </p>
           <p>
-              &copy; 2024 <strong>tapall.ai</strong>. All rights reserved.
+            &copy; 2024 <strong>tapall.ai</strong>. All rights reserved.
           </p>
-      </div>
-  </footer>
-  <script>
-      function saveEmail() {
-          var email = document.getElementById('userEmail').value;
-          // Placeholder for where you'd actually handle the email saving logic
-          console.log("Email submitted: " + email);
+        </div>
+      </footer>
+      <script>
+        function vaildate() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          var isValid = true;
+
+          if (name == "") {
+            document.getElementById("nameError").innerHTML = "Please enter your name";
+            isValid = false;
+          }
+          else if (name.length > 100) {
+            document.getElementById("nameError").innerHTML = "Name must be 100 characters or less";
+            isValid = false;
+          }
+          else {
+            document.getElementById("nameError").innerHTML = "";
+          }
+
+          if (email == "") {
+            document.getElementById("emailError").innerHTML = "Please enter your email address";
+            isValid = false;
+          }
+          else if (email.length > 100) {
+            document.getElementById("emailError").innerHTML = "Email address must be 100 characters or less";
+            isValid = false;
+          }
+          else if (!validateEmail(email)) {
+            document.getElementById("emailError").innerHTML = "Please enter a valid email address";
+            isValid = false;
+          }
+          else {
+            document.getElementById("emailError").innerHTML = "";
+          }
+
+          if (message == "") {
+            document.getElementById("messageError").innerHTML = "Please enter your message";
+            isValid = false;
+          }
+          else if (message.length > 500) {
+            document.getElementById("messageError").innerHTML = "Message must be 500 characters or less";
+            isValid = false;
+          }
+          else {
+            document.getElementById("messageError").innerHTML = "";
+          }
+
+          return isValid;
+        }
+
+        function validateEmail(email) {
+          var re = /\S+@\S+\.\S+/;
+          return re.test(email);
+        }
+        function saveEmail() {
+          if (!vaildate()) return;
+
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          $.ajax({
+            // url: 'https://www.kuosanyinzi.com/tap-serve/tap/open/saveMsg',
+            url: 'http://127.0.0.1:8080/tap-serve/tap/open/saveMsg',
+            type: 'post',
+            data: JSON.stringify({
+              name: name,
+              email: email,
+              message, message
+            }),
+            contentType: "application/json",
+            dataType: 'json',
+            success: function (data, dataTextStatus, jqxhr) {
+              if (data.code == 200) {
+                document.getElementById('successMessage').innerHTML = 'Thank you for submitting your email!'
+                document.getElementById('successMessage').style.display = 'block';
+              } else {
+                document.getElementById('successMessage').innerHTML = 'An exception occurred. Please try again later'
+                document.getElementById('successMessage').style.display = 'block';
+              }
+            }, error: function (jqxhr, textStatus, error) {
+              document.getElementById('successMessage').innerHTML = 'An exception occurred. Please try again later'
+              document.getElementById('successMessage').style.display = 'block';
+            }
+          })
+
           // Displaying a success message
-          document.getElementById('successMessage').style.display = 'block';
           // Here you could also send the email to a server using fetch or XMLHttpRequest
-      }
-  </script>
-  
-  </div>
-</footer>
+        }
+      </script>
+
+    </div>
+  </footer>
 
 </body>
+
 </html>
