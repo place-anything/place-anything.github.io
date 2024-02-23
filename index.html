@@ -67,18 +67,18 @@
               <span class="author-block"><sup>2</sup>Southern University of Science and Technology,</span>
             </div>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-
-                <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2402.14316"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
-              </span> -->
+              </span>
                 <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -522,7 +522,7 @@
       <!--/ Concurrent Work. -->
       <div class="content has-text-centered">
         <p>
-          Wanna get access to Place-Anything? Submit your enquires here!
+      Wanna get access to Place-Anything? Please submit your enquires here! Or send email to service@tapall.ai
         </p>
         <div class="email">
           <p class="email-message"></p>
@@ -667,6 +667,7 @@
             dataType: 'json',
             success: function (data, dataTextStatus, jqxhr) {
               if (data.code == 200) {
+                document.getElementById('successMessage').innerHTML = 'Thank you for submitting your email!'
                 document.getElementById('successMessage').style.display = 'block';
               } else {
                 document.getElementById('successMessage').innerHTML = 'An exception occurred. Please try again later'
